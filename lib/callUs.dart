@@ -59,72 +59,8 @@ class _CallUsState extends State<CallUs> {
                     ),
                   ),
                 ),
-                Form(
-                  child: Stack(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: TextFormField(
-                          decoration: InputDecoration(
-                              hintText: 'اكتب ما يخطر في بالك...',
-                              hintStyle: TextStyle(
-                                color: Colors.grey,
-                              ),
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.all(Radius.circular(50)),
-                                  borderSide: BorderSide(color: Colors.white)
-                              ),
-                              enabledBorder:  OutlineInputBorder(
-                                  borderRadius: BorderRadius.all(Radius.circular(50)),
-                                  borderSide: BorderSide(color: Colors.white)
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.all(Radius.circular(50)),
-                                  borderSide: BorderSide(color: Colors.white)
-                              ),focusColor: Colors.white,
-                              fillColor: Colors.white,
-                              filled: true,
-                              labelStyle: TextStyle(
-                                  color: Colors.white
-                              )
-                          ),
-                        ),
-                      ),
-                      Transform.translate(
-                        offset: Offset(MediaQuery.of(context).size.width*-0.85, 20),
-                        child: Align(
-                          alignment: Alignment.centerRight,
-                          child: InkWell(
-                            onTap: (){},
-                            child: Container(
-                              width: 35,
-                              height: 35,
-                              child: Icon(Icons.send,color: Colors.white,),
-                              decoration: BoxDecoration(
-                                  gradient: LinearGradient(
-                                      begin: Alignment.topRight,
-                                      end: Alignment.bottomLeft,
-                                      colors: [
-                                        Color(0xFF0F52BA),
-                                        Color(0xFF6593F5),
-                                        Color(0xFF4682B4),
-                                      ],
-                                      stops: [
-                                        0.33,
-                                        0.66,
-                                        0.99
-                                      ],
-                                  ),
-                              shape: BoxShape.circle
-                              ),
-                            ),
-                          ),
-                        ),
-                      )
+                messagefield(),
 
-                    ],
-                  ),
-                )
               ],
             ),
 
@@ -196,6 +132,75 @@ class _CallUsState extends State<CallUs> {
         ) ,
 
       ],
+    );
+  }
+
+  messagefield() {
+    return  Form(
+      child: Stack(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextFormField(
+              decoration: InputDecoration(
+                  hintText: 'اكتب ما يخطر في بالك...',
+                  hintStyle: TextStyle(
+                    color: Colors.grey,
+                  ),
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(50)),
+                      borderSide: BorderSide(color: Colors.white)
+                  ),
+                  enabledBorder:  OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(50)),
+                      borderSide: BorderSide(color: Colors.white)
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(50)),
+                      borderSide: BorderSide(color: Colors.white)
+                  ),focusColor: Colors.white,
+                  fillColor: Colors.white,
+                  filled: true,
+                  labelStyle: TextStyle(
+                      color: Colors.white
+                  )
+              ),
+            ),
+          ),
+          Transform.translate(
+            offset: Offset(MediaQuery.of(context).size.width*-0.85, 20),
+            child: Align(
+              alignment: Alignment.centerRight,
+              child: InkWell(
+                onTap: (){},
+                child: Container(
+                  width: 35,
+                  height: 35,
+                  child: Icon(Icons.send,color: Colors.white,),
+                  decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topRight,
+                        end: Alignment.bottomLeft,
+                        colors: [
+                          Color(0xFF0F52BA),
+                          Color(0xFF6593F5),
+                          Color(0xFF4682B4),
+                        ],
+                        stops: [
+                          0.33,
+                          0.66,
+                          0.99
+                        ],
+                      ),
+                      shape: BoxShape.circle
+                  ),
+                ),
+              ),
+            ),
+          )
+
+        ],
+      ),
     );
   }
 }
