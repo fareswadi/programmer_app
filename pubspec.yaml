@@ -61,6 +61,8 @@ flutter:
      - images/teach.jpg
      - images/laptop.jpg
      - images/laptopE.png
+     - images/con1.png
+     - images/con2.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

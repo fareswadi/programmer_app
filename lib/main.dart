@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'مبرمجين',
 
-      home:WelcomePage(),
+      home:CallUs(),
       routes: <String,WidgetBuilder>{
         '/MainPage':(BuildContext context)=>new MainPage(),
         '/CallUs':(BuildContext context)=>new CallUs()
