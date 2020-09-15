@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:programmer_app/details.dart';
 class Tab2 extends StatefulWidget {
   @override
   _Tab2State createState() => _Tab2State();
@@ -81,7 +82,11 @@ class _Tab2State extends State<Tab2> {
                     Row(
                       children: [
                         RaisedButton(
-                          onPressed: () {},
+                          onPressed: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
+                              return Details();
+                            }));
+                          },
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(30),
                               side: BorderSide(color: Colors.black,width: 2)
