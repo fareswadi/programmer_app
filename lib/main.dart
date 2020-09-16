@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:programmer_app/callUs.dart';
 import 'package:programmer_app/details.dart';
+import 'package:programmer_app/information.dart';
 import 'file:///G:/flutter_project/programmer_app/lib/mainpage/mainpage.dart';
 import 'package:programmer_app/pageview.dart';
 import 'package:programmer_app/welcomepage.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'مبرمجين',
 
-      home:WelcomePage(),
+      home:Information(),
       routes: <String,WidgetBuilder>{
         '/MainPage':(BuildContext context)=>new MainPage(),
         '/CallUs':(BuildContext context)=>new CallUs()

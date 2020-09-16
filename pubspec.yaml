@@ -64,6 +64,11 @@ flutter:
      - images/con1.png
      - images/con2.jpg
      - images/teach.jpg
+     - images/location.jpg
+     - images/facebook.png
+     - images/inst.png
+     - images/whats.png
+     - images/twitter.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
