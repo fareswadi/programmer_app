@@ -6,6 +6,7 @@ import 'package:programmer_app/information.dart';
 import 'package:programmer_app/notification.dart';
 import 'file:///G:/flutter_project/programmer_app/lib/mainpage/mainpage.dart';
 import 'package:programmer_app/pageview.dart';
+import 'package:programmer_app/using.dart';
 import 'package:programmer_app/welcomepage.dart';
 
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'مبرمجين',
 
-      home:Notificationpage(),
+      home:WelcomePage(),
       routes: <String,WidgetBuilder>{
         '/MainPage':(BuildContext context)=>new MainPage(),
         '/CallUs':(BuildContext context)=>new CallUs()

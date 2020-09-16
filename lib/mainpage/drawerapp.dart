@@ -1,5 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:programmer_app/callUs.dart';
+import 'package:programmer_app/information.dart';
+import 'package:programmer_app/mainpage/mainpage.dart';
+import 'package:programmer_app/notification.dart';
+import 'package:programmer_app/using.dart';
 
 class DrawerPage extends StatefulWidget {
   @override
@@ -55,7 +60,11 @@ class _DrawerPageState extends State<DrawerPage> {
                     Icons.home,
                     color: Colors.white,
                   ),
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
+                      return MainPage();
+                    }));
+                  },
                 ),
               ),
               Padding(
@@ -69,7 +78,11 @@ class _DrawerPageState extends State<DrawerPage> {
                     Icons.notifications,
                     color: Colors.white,
                   ),
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
+                      return Notificationpage();
+                    }));
+                  },
                 ),
               ),
               Padding(
@@ -83,7 +96,11 @@ class _DrawerPageState extends State<DrawerPage> {
                     Icons.phone,
                     color: Colors.white,
                   ),
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
+                      return CallUs();
+                    }));
+                  },
                 ),
               ),
               Padding(
@@ -97,7 +114,11 @@ class _DrawerPageState extends State<DrawerPage> {
                     Icons.help_outline,
                     color: Colors.white,
                   ),
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
+                      return Information();
+                    }));
+                  },
                 ),
               ),
               Padding(
@@ -111,7 +132,11 @@ class _DrawerPageState extends State<DrawerPage> {
                     Icons.pan_tool,
                     color: Colors.white,
                   ),
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
+                      return Using();
+                    }));
+                  },
                 ),
               )
             ],
