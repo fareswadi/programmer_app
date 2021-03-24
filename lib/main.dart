@@ -3,17 +3,17 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:programmer_app/callUs.dart';
 import 'package:programmer_app/details.dart';
 import 'package:programmer_app/information.dart';
+import 'package:programmer_app/mainpage/mainpage.dart';
 import 'package:programmer_app/notification.dart';
-import 'file:///G:/flutter_project/programmer_app/lib/mainpage/mainpage.dart';
 import 'package:programmer_app/pageview.dart';
 import 'package:programmer_app/using.dart';
 import 'package:programmer_app/welcomepage.dart';
 
 
 void main() {
-  runApp(MyApp());
+  runApp(WelcomePage());
 }
-
+TextDirection currentTextDir = TextDirection.rtl;
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
@@ -21,26 +21,30 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'مبرمجين',
 
-      home:WelcomePage(),
+      home:Directionality(
+          textDirection: currentTextDir,
+          child: Sweppage(),),
       routes: <String,WidgetBuilder>{
-        '/MainPage':(BuildContext context)=>new MainPage(),
+        '/MainPage':(BuildContext context)=> MainPage(),
         '/CallUs':(BuildContext context)=>new CallUs()
       } ,
       debugShowCheckedModeBanner: false,
-      locale: Locale('ar',''),
+      locale:  Locale("ar", "AE"),
       supportedLocales: [
-        Locale('en',''),
-        Locale('ar','')
+        Locale('ar','UK'),
+        Locale('en','AE'),
+
       ],
       localizationsDelegates: [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      localeResolutionCallback: (currentlocal,supportedlocales){
+     /* localeResolutionCallback: (currentlocal,supportedlocales){
         if(currentlocal != null){
           for(Locale locale in supportedlocales){
             if(currentlocal.languageCode==locale.languageCode){
+
               return currentlocal;
             }
           }
@@ -48,7 +52,7 @@ class MyApp extends StatelessWidget {
         }
         return supportedlocales.first;
 
-      },
+      },*/
     );
   }
 }
